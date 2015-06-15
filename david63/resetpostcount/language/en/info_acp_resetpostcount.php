@@ -50,6 +50,8 @@ $lang = array_merge($lang, array(
 
 	'OR_ZERO'						=> '--- OR ---',
 
+	'RESET_OVERIDE'					=> 'Overide errors',
+	'RESET_OVERIDE_EXPLAIN'			=> 'Setting this option will allow the increase of a user’s post count.',
 	'RESET_POST_COUNT'				=> 'Reset post count',
 	'RESET_POST_COUNT_EXPLAIN' 		=> 'Here you can select a user and then reset their post count.',
 	'RESET_USER_DETAILS'			=> '%1$s currently has %2$s posts',
@@ -58,7 +60,7 @@ $lang = array_merge($lang, array(
 	'RESET_VALUE'					=> 'Reset value',
 	'RESET_VALUE_EXPLAIN'			=> 'The new value for the post count of the selected user.',
 	'RESET_ZERO'					=> 'Reset to zero',
-	'RESET_ZERO_EXPLAIN'			=> 'Selecting this will reset the user’s post count to zero.<br />Note: Selecting this will overwrite any value entered in the <strong>Reset value</strong> field.',
+	'RESET_ZERO_EXPLAIN'			=> 'Selecting this will reset the user’s post count to zero.<br /><strong>Note:</strong> Selecting this will overwrite any value entered in the <strong>Reset value</strong> field.',
 
 	'USER_POST_COUNT_RESET'			=> 'Successfully reset post count for <strong>%1$s</strong> from %2$s to %3$s.',
 ));

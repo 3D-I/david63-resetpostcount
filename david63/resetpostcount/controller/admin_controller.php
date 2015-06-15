@@ -81,6 +81,7 @@ class admin_controller implements admin_interface
 		add_form_key($form_key);
 
 		$option			= $this->request->variable('option', '');
+		$overide		= $this->request->variable('overide', '');
 		$post_count		= $this->request->variable('post_count', 0);
 		$reset_username	= $this->request->variable('reset_username', '');
 		$reset_value	= $this->request->variable('reset_value', '');
@@ -107,7 +108,7 @@ class admin_controller implements admin_interface
 						$errors[] = $this->user->lang('ERROR_NO_DATA_SPECIFIED');
 					}
 
-					if ($reset_value > $post_count)
+					if (($reset_value > $post_count) && !$overide)
 					{
 						$errors[] = $this->user->lang('ERROR_RESET_GREATER');
 					}
@@ -135,6 +136,7 @@ class admin_controller implements admin_interface
 
 						$hidden_fields = array(
 							'option'			=> 'update',
+							'overide'			=> $overide,
 							'post_count'		=> $post_count,
 							'reset_username'	=> $reset_username,
 							'user_id'			=> $user_id,
@@ -165,7 +167,7 @@ class admin_controller implements admin_interface
 							$errors[] = $this->user->lang('ERROR_INVALID_USER_SPECIFIED');
 						}
 
-						if ($post_count == 0)
+						if ($post_count == 0 && !$overide)
 						{
 							$errors[] = $this->user->lang('ERROR_NO_POST_COUNT');
 						}
@@ -177,6 +179,7 @@ class admin_controller implements admin_interface
 
 						$hidden_fields = array(
 							'option'			=> 'update',
+							'overide'			=> $overide,
 							'post_count'		=> $post_count,
 							'reset_username'	=> $reset_username,
 							'user_id'			=> $user_id,

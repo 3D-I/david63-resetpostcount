@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Adds an ACP option to allow the resetting of a user's post count",
 	"homepage": "",
-	"version": "0.0.1-b1",
+	"version": "0.0.1-b2",
 	"time": "2015-06-11",
 	"license": "GPL-2.0",
 	"authors": [{
